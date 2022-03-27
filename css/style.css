@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title h1{
+    text-align: center;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-size: 7vw;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.671),rgba(255, 0, 0, 0.664));
+    color: white
+}
+.title p{
+    margin-top: 5px;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3vw;
+}
+.title p span{
+    color: green;
+    font-size: 4vw;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0,0.1);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.searchArea{
+    /* background-color: blue; */
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    background-color: rgba(128, 128, 128, 0.116);
+    font-size: 20px;
+}
+
+.searchText{
+    
+    display: flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /* transform: translate(20%); */
+    
+}
+.searchArea p{
+    padding-right: 15px;
+}
+
+input[type='text']{
+    width: 20vw;
+}
+.radioButton{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 20px;
+    /* transform: translate(20%); */
+}
+.radioButton p{
+    padding-right: 50px;
+}
+input[type=radio]{
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    outline: none;
+}
+label{
+    margin-right: 50px;
+}
+
+.limit{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 20px;
+    /* transform: translate(20%); */
+    
+}
+.limit p{
+    margin-right: 30px;
+}
+select{
+    width: 10vw;
+    text-align: center;
+    cursor: pointer;
+}
+select option{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    .searchArea{
+        width:90%;
+    }
+}
