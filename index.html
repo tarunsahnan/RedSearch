@@ -9,8 +9,6 @@
         <h1>RedSearch</h1>
         <p>Search from reddit: <span>Easy, Fast & Organized</span></p>
     </div>
-
-
     <div class="searchArea">
 
         <form action="">
@@ -22,13 +20,18 @@
 
             <div class="radioButton">
                 <p>Sort</p>
-                <input type="radio" class="radio name="radio" value="relevance" checked>
+                <input type="radio" class="radio" name="radio" value="relevance" checked>
                 <label type="radio" ">Relevance</label>
 
-                <input type="radio" class="radio name="radio" value="relevance">
-                <label type="radio" >Latest</label>
+                <input type="radio" class="radio" name="radio" value="new">
+                <label type="radio" >New</label>
+                
+                <input type="radio" class="radio" name="radio" value="hot">
+                <label type="radio" >Hot</label>
+                
+                <input type="radio" class="radio" name="radio" value="top">
+                <label type="radio" >Top</label>
             </div>
-            
             <div class="limit">
                 <p>Limit</p>
                 <select name="limit" class="select">
@@ -37,22 +40,12 @@
                     <option value="20">20</option>
                     <option value="50">50</option>
                     <option value="100">100</option>
-
                 </select>
-
             </div>
-
+            <button class="btn">Search</button>
         </form>
-
-
-
-
     </div>
-
-
-
-
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>
