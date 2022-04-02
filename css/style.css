@@ -1,153 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
- */
-/* } */
+input{
+    outline:none;
+}
+input:focus{
+    outline: none;
+}
+button{
+    border:none;
+}
+button:focus{
+    border:none;
+}
+body{
+    background-color: #0a0a0ae9;
+    overflow-x: hidden;
+}
+
+
 .title h1{
     text-align: center;
     width: 97%;
     margin-left:auto;
     margin-right: auto;
     margin-top: 10px;
-    height: 5%;
     line-height: 3ch;
-    font-size: 7vw;
-    background: linear-gradient(to right,rgba(0, 0, 0, 0.671),rgba(255, 0, 0, 0.664));
-    color: white
-}
-.title p{
-    margin-top: 5px;
-    width: 70%;
-    margin-left:auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 3vw;
-}
-.title p span{
-    color: green;
-    font-size: 4vw;
-    font-weight: bold;
-    background-color: rgba(247, 86, 86, 0.192);
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 25px;
+    background: #ed254ddb;
+    color: rgba(255, 255, 255, 0.893);
 }
 
 .searchArea{
     margin: auto;
     margin-top: 10px;
     padding-top: 20px;
-    padding-bottom: 20px;
-    width: 50%;
-    height: 200px;
-    background-color: rgba(175, 171, 171, 0.116);
+    padding: 20px;
+    padding-left: 50px;
+    width: 70%;
+    line-height: 3ch;
+    background-color: #726E60;
+    color:#FFCF00;
     font-size: 20px;
     position: relative;
 }
 
-.searchText{
-    
-    display: flex;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.searchArea p{
-    padding-right: 15px;
+.searchArea input[type="text"]{
+    width: 40%;
+    font-size: 1em;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    padding: 10px;
 }
 
-input[type='text']{
-    width: 20vw;
-}
-.radioButton{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    margin-top: 20px;
-}
-
-
-.radioButton p{
-    padding-right: 55px;
-}
-input[type=radio]{
-    cursor: pointer;
-    margin-top: 5px;
-    margin-right: 5px;
+input[type="text"]:focus{
+    background-color:#F2F3AE;
+    width: 80%;
+    border: none;
     outline: none;
+    
 }
-label{
-    margin-right: 20px;
+.defaultSearch input{
+    margin-left: 30px;
+    width: 30%;
+    height: 35px;
+    font-size: 0.7em;
 }
 
-.limit{
-    width: 50%;
+.roundButton{
+    border-radius:2em;
+    text-decoration:none;
+    margin-top: 0px;
+    width: 150px;
+    height: 30px;
+    font-size:1.5ch;
+    margin-left: 10px;
+}
+
+.searchButton{
+    background-color: #D58936;
+    cursor:pointer;
+    margin-top: 20px;
+    margin-left: 50%;
+    margin-bottom: 20px ;
+    width: 100%;
+    height: 45px;
+    font-size: xx-large;
+    line-height: 0ch;
+    font-weight: 800;
+    transform: translateX(-52%);
+    outline: none;
+    word-spacing: 20ch;
+    padding-bottom: 4px;
+    transition: 200ms color ease-in-out;
+    transition: 200ms background-color ease-in-out;
+}
+.searchButton:hover{
+    background-color: #A44200;
+    color: white;
+}
+.searchButton:active{
+    background-color: #3772FF;
+}
+
+.cmtSub p{
+    margin-top: 40px;
+}
+.cmtSubRadio{
+    background: #454857;
+	border-radius: 3px;
+	text-align: center;
+    line-height: 1ch;
+    padding: 5px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    margin-top: 20px;    
+    transform: translateY(-90%);
+    box-shadow: 0px 0px 67px 0px rgba(0,0,0,0.75);
 }
-.limit p{
-    margin-right: 30px;
+.cmtSubRadio input{
+    appearance: none;
+    width: 40%;
+	height: 30px;
+    margin-right: 20px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 20px;
+	background: #45485700;
+	color: #bdbdbd;
+}
+.cmtSubRadio input:checked{
+    background-image: linear-gradient(130deg, #F9DC5C, #726E60);
+	color: white;
+}
+
+.cmtSubRadio input::before{
+    content: attr(label);
+    font-size: large;
+    line-height: 3ch;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+/* .cmtSubRadio input:hover{
+    cursor: pointer;
+} */
+
+.comment, .submission{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 30px;
+    row-gap: 0.8em;
+    font-size: large;
+    /* display: none; */
+}
+
+.q-not input, .title-not input{
+
+    background-color: rgba(244, 27, 27, 0.605);
+    color:aqua;
+}
+
+.q-not input:focus, .title-not input:focus{
+
+    background-color: red;
+}
+
+
+.radio{
+    display: grid;
+    grid-template-columns: 1em auto;
+    column-gap: 0.5em;   
+    color: black;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.radio > input[type="radio"]{
+    appearance: none;
+    width:1em;
+    height: 1em;
+    border: 0.1em solid;
+    border-radius: 50%;
+    margin-right: 1px;
+    transform: translateY(70%);
+    display: grid;
+    place-content: center;
+}
+
+.radio > input[type="radio"]:hover{
+    cursor: pointer;
+}
+
+.radio > input[type="radio"]::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #F2F3AE;
+  }
+
+.radio > input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+.radio > input[type="radio"]:focus {
+    outline: 2px solid red;
+    outline-offset: max(2px, 0.15em);
+  }
+
+.sortType{
+    position: absolute;
 }
 select{
-    width: 15vw;
+    width: minmax(50px,150px);
+    margin-top: 5px;
     text-align: center;
+    padding: 2px;
+    background-color: #3772FF;
+    font-size: large;
+    color: #F2F3AE;
+    font-weight: 500;
+}
+select:hover{
     cursor: pointer;
-    
-}
-select option{
-    cursor: pointer;
 }
 
-.btn{
-    width: 30%;
-    height: 40px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-    font-size: 3ch;
-    line-height: 1ch;
-    font-weight: bold;
-    border-radius: 50%;
-    border-color: transparent;
-    background-color: rgba(128, 128, 128, 0.301);
-}
-.btn:hover{
-    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-    animation: slidebg 2s linear infinite;
-    border: none;
-    cursor: pointer;
-    opacity: 0.9;
+.time{
+    transform: translateY(50%);
 }
 
-
-.alert{
-    border: 1px solid;
-    width: 400px;
-    text-align: center;
-    height: 60px;
-    line-height: 4.5ch;
-    font-size: 1.5em;
-    margin-left:auto ;
-    margin-right: auto;
-    margin-top: 1em;
-    font-weight: 700;
+.comment, .submission{
+    display: none;
 }
 
-.error{
-    background-color: rgba(252, 54, 54, 0.685);
-}
-
-.success{
-    background-color: rgba(0, 128, 0, 0.685);
-}
 @media screen and (max-width: 800px){
     .searchArea{
         width:90%;
     }
-}
+} 

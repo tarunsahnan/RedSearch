@@ -7,44 +7,195 @@
 <body>
     <div class="title">
         <h1>RedSearch</h1>
-        <p><span>Easy, Fast & Organized</span></p>
     </div>
     <div class="searchArea">
 
         <form action="">
 
-            <div class="searchText">
-                <p>Keyword</p>
-                <input type="text" name="input" id="">
+            <div class="defaultSearch">
+                <span>Search</span>
+                <input type="text">
             </div>
 
-            <div class="radioButton">
-                <p>Sort</p>
-                <input type="radio" class="radio" name="radio" value="relevance" checked>
-                <label type="radio" ">Relevance</label>
+            <div class="mainButton">
+                <button class="searchButton roundButton">Search</button>
+            </div>  
+            <div class="cmtSub">
+                <p>Detailed Search<p> 
 
-                <input type="radio" class="radio" name="radio" value="new">
-                <label type="radio" >New</label>
-                
-                <input type="radio" class="radio" name="radio" value="hot">
-                <label type="radio" >Hot</label>
-                
-                <input type="radio" class="radio" name="radio" value="top">
-                <label type="radio" >Top</label>
+                    <div class="cmtSubRadio">
+                        <input label="Submission" type="radio" value="Submission" name="detailed" >
+                        <input label="Comment" type="radio" value="Comment" name="detailed"> 
+                    </div>
             </div>
-            <div class="limit">
-                <p>Limit</p>
-                <select name="limit" class="select">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="20">20</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                </select>
+
+            <div class="submission">
+
+                <!-- <div class="idAuth"> -->
+                    <div class="ids">
+                        <p>IDs</p>
+                        <input type="text" placeholder="comma separated">
+                    </div>
+                    <div class="author">
+                        <p>Author </p>
+                        <input type="text">
+                    </div>
+                <!-- </div> -->
+
+                <!-- <div class="q"> -->
+                    <div class="subreddit">
+                        <p>Subreddit</p>
+                        <input type="text">
+                    </div>
+
+                    <div class="q-not">
+                        <p>Search Not Include</p>
+                        <input type="text">
+                    </div>
+                <!-- </div> -->
+                
+
+
+
+                <!-- <div class="title"> -->
+                    <div class="title-yes">
+                        <p>Title Include</p>
+                        <input type="text">
+                    </div>
+
+                    <div class="title-not">
+                        <p>Title Not Include</p>
+                        <input type="text">
+                    </div>
+                <!-- </div> -->
+
+                <!-- <div class="sort"> -->
+                    <div class="sort-order">
+                        <p>Sort Order</p>
+                        
+                        <div class="radio">
+                            
+                            <input type="radio" value="asc" name="sort" checked>
+                            <label class="focusText">asc</label>
+
+                            <input type="radio" value="desc" name="sort"> 
+                            <label class="focusText">desc</label>
+                        </div>
+                    </div>
+
+                    <div class="sort-type">
+                        <p>Sort type</p>
+                        <select >
+                            <option value="created_utc" selected>Creation Time</option>                    
+                            <option value="num_comments">No. of Comments</option>
+                            <option value="score" >Score</option>
+                        </select>
+                    </div>
+
+                    <div class="score">
+                        <p>Score</p>
+                        <input type="text" placeholder="x | >x | <x">
+                    </div>
+                    <div class="num_comments">
+                        <p>No. of Comments</p>
+                        <input type="text" placeholder="x | >x | <x">
+                    </div>  
+                        
+                    <div class="size">
+                        <p>Limit</p>
+                        <input type="text" placeholder="Integer <= 500">
+                    </div> 
+                    <!-- Left Blank intentionally -->
+                    <div></div>
+
+
+                    <div class="time">
+                        <p>Upload Date:</p>
+                    </div>
+
+                    <!-- div left blank intentionally -->
+                    <div></div>
+                    <div class="After">
+                        <p>After</p>
+                        <input type="text" placeholder="Epoch value only">
+                    </div>
+                    <div class="Before">
+                        <p>Before</p>
+                        <input type="text" placeholder="Epoch value only">
+                    </div>
+
+                <!-- </div> -->
             </div>
-            <button class="btn">Search</button>
+
+
+            <div class="comment">
+
+                <!-- <div class="idAuth"> -->
+                    <div class="ids">
+                        <p>IDs</p>
+                        <input type="text" placeholder="comma separated">
+                    </div>
+                    <div class="author">
+                        <p>Author </p>
+                        <input type="text">
+                    </div>
+                <!-- </div> -->
+
+                <div class="subreddit">
+                    <p>Subreddit</p>
+                    <input type="text" placeholder="comma separated">
+                </div>
+                
+                <div class="size">
+                    <p>Limit</p>
+                    <input type="text" placeholder="Integer <= 500">
+                </div>
+   
+
+                <!-- <div class="sort"> -->
+                    <div class="sort-order">
+                        <p>Sort Order</p>
+                        
+                        <div class="radio">
+                            
+                            <input type="radio" value="asc" name="sort" checked>
+                            <label class="focusText">asc</label>
+
+                            <input type="radio" value="desc" name="sort"> 
+                            <label class="focusText">desc</label>
+                        </div>
+                    </div>
+
+                    <div class="sort-type">
+                        <p>Sort type</p>
+                        <select >
+                            <option value="created_utc" selected>Creation Time</option>                    
+                            <option value="num_comments">No. of Comments</option>
+                            <option value="score" >Score</option>
+                        </select>
+                    </div>
+
+                    <div class="time">
+                        <p>Upload Date:</p>
+                    </div>
+
+                    <!-- div left blank intentionally -->
+                    <div></div>
+                    <div class="After">
+                        <p>After</p>
+                        <input type="text" placeholder="Epoch value only">
+                    </div>
+                    <div class="Before">
+                        <p>Before</p>
+                        <input type="text" placeholder="Epoch value only">
+                    </div>
+
+            </div>
+            
+            
         </form>
     </div>
+
     <script type="module" src="./js/script.js"></script>
 </body>
 
