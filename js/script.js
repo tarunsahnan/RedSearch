@@ -28,7 +28,7 @@ function display(e){
         document.querySelector('.submission').style.display = "grid";
         document.querySelector('.comment').style.display = "none";
     }
-    else{
+    else if(val == 'comment'){
         
         document.querySelector('.comment').style.display = "grid";
         document.querySelector('.submission').style.display = "none";
