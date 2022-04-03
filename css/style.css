@@ -22,8 +22,21 @@ body{
     overflow-x: hidden;
 }
 ::placeholder{
-    font-size: 7px;
+    font-size: 10px;
 }
+.alert{
+    font-size: 20px;
+    width: 50%;
+
+    margin: 20px auto;
+    font-weight: bolder;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+}
+
 
 .title h1{
     text-align: center;
@@ -110,7 +123,7 @@ input[type="text"]:focus{
 }
 
 .cmtSub p{
-       margin-top: 40px;
+       margin-top: 10px;
 }
 .cmtSub{
     display: flex;
@@ -121,7 +134,7 @@ input[type="text"]:focus{
 .comment, .submission{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin-top: 30px;
+    margin-top: 0px;
     row-gap: 0.8em;
     font-size: large;
     /* display: none; */
@@ -209,8 +222,40 @@ select:hover{
     display: none;
 }
 
+
+.result{
+    margin-top: 20px;
+    padding: 20px;
+    /* background-color:  #A7C4C2; */
+
+}
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    column-gap: 30px;
+    margin-right: 100px;
+}
+.cardGrid:nth-child(odd){
+    margin-left: 140px;
+}
+
+.noHover:hover{
+    color: rgb(240, 79, 79);
+}
+
+.line{
+    transform: translateY(-80%);
+}
+
 @media screen and (max-width: 800px){
     .searchArea{
         width:90%;
+    }
+    .cardGrid{
+        display: inline;
+    }
+    .result .bg{
+        width: 100%;
     }
 } 

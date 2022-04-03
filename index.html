@@ -15,7 +15,7 @@
 
             <div class="defaultSearch">
                 <span>Search</span>
-                <input type="text">
+                <input type="text" name="default">
             </div>
 
             <div class="mainButton">
@@ -30,9 +30,9 @@
                     </div> -->
 
                     <select class="form-select detailedSearch" aria-label="Default select example">
-                        <option value="both" selected>All</option>
-                        <option value="submission">Submission</option>
                         <option value="comment">Comment</option>
+                        <option value="submission">Submission</option>
+                        <option value="none" selected>None</option>
                       </select>
                     
                     <!-- <input label="Comment" type="radio" value="Comment" name="detailed" checked class="hidden">  -->
@@ -53,7 +53,7 @@
 
                 <!-- <div class="q"> -->
                     <div class="subreddit">
-                        <p>Subreddit</p>
+                        <p>Channel</p>
                         <input type="text">
                     </div>
 
@@ -62,9 +62,6 @@
                         <input type="text">
                     </div>
                 <!-- </div> -->
-                
-
-
 
                 <!-- <div class="title"> -->
                     <div class="title-yes">
@@ -151,7 +148,7 @@
                 <!-- </div> -->
 
                 <div class="subreddit">
-                    <p>Subreddit</p>
+                    <p>Channel</p>
                     <input type="text" placeholder="comma separated">
                 </div>
                 
@@ -205,6 +202,9 @@
         </form>
     </div>
 
+    <div class="result"></div>
+
+    <script src="https://kit.fontawesome.com/2d19ab3f68.js" crossorigin="anonymous"></script>
     <script type="module" src="./js/script.js"></script>
 </body>
 
