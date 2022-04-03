@@ -218,6 +218,8 @@ select:hover{
     transform: translateY(50%);
 }
 
+
+
 .comment,.submission{
     display: none;
 }
@@ -247,6 +249,23 @@ select:hover{
 .line{
     transform: translateY(-80%);
 }
+.card-title{
+    color:#004bf9;
+}
+
+.pushshiftAPI{
+    color: peachpuff;
+    position: absolute;
+    bottom: 1px;
+    /* margin: 10px; */
+    /* left: 50%;
+    right: 50%; */
+    width: 40%;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+
+}
 
 @media screen and (max-width: 800px){
     .searchArea{
@@ -257,5 +276,9 @@ select:hover{
     }
     .result .bg{
         width: 100%;
+    }
+    .pushshiftAPI{
+        width: 80%;
+        /* left:10%; */
     }
 } 

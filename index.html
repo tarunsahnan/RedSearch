@@ -81,10 +81,10 @@
                         
                         <div class="radio">
                             
-                            <input type="radio" value="asc" name="sort" checked>
+                            <input type="radio" value="asc" name="sub-sort" checked>
                             <label class="focusText">asc</label>
 
-                            <input type="radio" value="desc" name="sort"> 
+                            <input type="radio" value="desc" name="sub-sort"> 
                             <label class="focusText">desc</label>
                         </div>
                     </div>
@@ -123,11 +123,11 @@
                     <div></div>
                     <div class="after">
                         <p>After</p>
-                        <input type="text" placeholder="Epoch value only">
+                        <input type="date" placeholder="Epoch value only">
                     </div>
                     <div class="before">
                         <p>Before</p>
-                        <input type="text" placeholder="Epoch value only">
+                        <input type="date" placeholder="Epoch value only">
                     </div>
 
                 <!-- </div> -->
@@ -139,7 +139,7 @@
                 <!-- <div class="idAuth"> -->
                     <div class="ids">
                         <p>IDs</p>
-                        <input type="text" placeholder="comma separated">
+                        <input type="text" placeholder="comma separated" name="ids">
                     </div>
                     <div class="author">
                         <p>Author </p>
@@ -164,10 +164,10 @@
                         
                         <div class="radio">
                             
-                            <input type="radio" value="asc" name="sort" checked>
+                            <input type="radio" value="asc" name="comm-sort" checked>
                             <label class="focusText">asc</label>
 
-                            <input type="radio" value="desc" name="sort"> 
+                            <input type="radio" value="desc" name="comm-sort"> 
                             <label class="focusText">desc</label>
                         </div>
                     </div>
@@ -187,13 +187,13 @@
 
                     <!-- div left blank intentionally -->
                     <div></div>
-                    <div class="After">
+                    <div class="after">
                         <p>After</p>
-                        <input type="text" placeholder="Epoch value only">
+                        <input type="date" placeholder="Epoch value only">
                     </div>
-                    <div class="Before">
+                    <div class="before">
                         <p>Before</p>
-                        <input type="text" placeholder="Epoch value only">
+                        <input type="date" placeholder="Epoch value only">
                     </div>
 
             </div>
@@ -203,6 +203,10 @@
     </div>
 
     <div class="result"></div>
+
+    <div class="pushshiftAPI">
+        <p>This site uses <a href="https://github.com/pushshift/api" target="_blank"><abbr title="The pushshift.io Reddit API was designed and created by the /r/datasets mod team to help provide enhanced functionality and search capabilities for searching Reddit comments and submissions.">Pushshift API</abbr></a>. It is very easy to use and I really appreciate them for providing this API at no extra charge.</p>
+    </div>
 
     <script src="https://kit.fontawesome.com/2d19ab3f68.js" crossorigin="anonymous"></script>
     <script type="module" src="./js/script.js"></script>
