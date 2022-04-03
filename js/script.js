@@ -4,6 +4,8 @@ function display(e){
     e.preventDefault();
     const val= detailedSearch.value;
 
+    result.innerHTML="";
+
     if(val == 'submission'){
         submission.style.display = "grid";
         comment.style.display = "none";
@@ -49,37 +51,34 @@ function search(e){
 
         searchButton.disabled=true;
 
-        if(val == 'none')
-            defaultSearch();
+        if(val == 'comment')
+            commentSearch();
         else if(val == 'submission')
             submissionSearch();
         else
-            commentSearch();
+            defaultSearch();;
     }
 }
 
 async function defaultSearch(){
-
     console.log(searchKey.value);
-    await (fetch(`https://api.pushshift.io/reddit/search/submission/?q=${searchKey.value}&over_18="false"`)
+  fetch(`https://api.pushshift.io/reddit/search/submission/?q=${searchKey.value}&over_18=false`)
                 .then(res => res.json())
                     .then(res => {
                         
                         console.log(res.data);
                         let output="<div class='card-columns cardGrid'>";
                         res.data.forEach(item => {
-
                             output += `
                             <div class="card mb-3">
                             <div>
                                 <div>
                                 <div class="card-body">
-                                    <a href="${item.full_link}" class="noHover">
+                                    <a target="_blank" href="${item.full_link}" class="noHover">
                                     <h5 class="card-title">${item.title}</h5>
                                     </a>
-                                    
                                     <p class="card-text"><small class="text-muted">${truncate(item.selftext,200)}</small></p>
-                                    <a class="noHover" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
+                                    <a class="noHover" target="_blank" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
                                     <p class="card-text line"><i class="fa-solid fa-comment"></i> ${item.num_comments}</p>
                                 </div>
                                 </div>
@@ -87,13 +86,18 @@ async function defaultSearch(){
                             </div>`;
                         });
                         output+='</div>';
-                        document.querySelector(".result").innerHTML = output;
+                        result.innerHTML = output;
                         console.log(document.querySelector(".result"));
-                    }));
+                    });
 
 
     searchButton.disabled=false;
 }
+
+function submissionSearch(){
+
+}
+
 
 function truncate(str,limit){
     const index= str.indexOf(' ',limit);
@@ -108,6 +112,7 @@ const detailedSearch = document.querySelector('.detailedSearch');
 detailedSearch.addEventListener('click',display);
 
 const searchKey = document.querySelector("input[name='default']");
+const result =document.querySelector(".result");
 
 const submission=document.querySelector('.submission');
 const comment=document.querySelector('.comment');
