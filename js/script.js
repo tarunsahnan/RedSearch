@@ -79,27 +79,28 @@ function defaultSearch(){
                         if(res.data.length == 0){
                             showAlert("No Results Found","danger");
                         }
-    
-                        let output="<div class='card-columns cardGrid'>";
-                        res.data.forEach(item => {
-                            output += `
-                            <div class="card mb-3">
-                            <div>
+                        else{
+                            let output="<div class='card-columns cardGrid'>";
+                            res.data.forEach(item => {
+                                output += `
+                                <div class="card mb-3">
                                 <div>
-                                <div class="card-body">
-                                    <a target="_blank" href="${item.full_link}" class="noHover">
-                                    <h5 class="card-title">${item.title}</h5>
-                                    </a>
-                                    <p class="card-text"><small class="text-muted">${truncate(item.selftext,200)}</small></p>
-                                    <a class="noHover" target="_blank" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
-                                    <p class="card-text line"><i class="fa-solid fa-comment"></i> ${item.num_comments}</p>
+                                    <div>
+                                    <div class="card-body">
+                                        <a target="_blank" href="${item.full_link}" class="noHover">
+                                        <h5 class="card-title">${item.title}</h5>
+                                        </a>
+                                        <p class="card-text"><small class="text-muted">${truncate(item.selftext,200)}</small></p>
+                                        <a class="noHover" target="_blank" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
+                                        <p class="card-text line"><i class="fa-solid fa-comment"></i> ${item.num_comments}</p>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
-                            </div>
-                            </div>`;
-                        });
-                        output+='</div>';
-                        result.innerHTML = output;
+                                </div>`;
+                            });
+                            output+='</div>';
+                            result.innerHTML = output;
+                        }
                     });
 
     searchButton.disabled=false;
@@ -183,28 +184,32 @@ function submissionSearch(){
                 if(res.data.length == 0){
                     showAlert("No Results Found","danger");
                 }
-                let output="<div class='card-columns cardGrid'>";
-                res.data.forEach(item => {
-                    output += `
-                    <div class="card mb-3">
-                    <div>
+                else{
+                    submission.style.display = "none";
+                    let output="<div class='card-columns cardGrid'>";
+                    res.data.forEach(item => {
+                        output += `
+                        <div class="card mb-3">
                         <div>
-                        <div class="card-body">
-                            <a target="_blank" href="${item.full_link}" class="noHover">
-                            <h5 class="card-title">${item.title}</h5>
-                            </a>
-                            <p class="card-text"><small class="text-muted">${truncate(item.selftext,200)}</small></p>
-                            <a class="noHover" target="_blank" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
-                            <p class="card-text line"><i class="fa-solid fa-comment"></i> ${item.num_comments}</p>
+                            <div>
+                            <div class="card-body">
+                                <a target="_blank" href="${item.full_link}" class="noHover">
+                                <h5 class="card-title">${item.title}</h5>
+                                </a>
+                                <p class="card-text"><small class="text-muted">${truncate(item.selftext,200)}</small></p>
+                                <a class="noHover" target="_blank" href="https://www.reddit.com/user/${item.author}"<p class="card-text"><i class="fa-solid fa-user "></i> ${item.author}</p></a>
+                                <p class="card-text line"><i class="fa-solid fa-comment"></i> ${item.num_comments}</p>
+                            </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                    </div>`;
-                });
-                output+='</div>';
-                result.innerHTML = output;
+                        </div>`;
+                    });
+                    output+='</div>';
+                    result.innerHTML = output;
+                }
             });
 
+        
     searchButton.disabled=false;
 }
 
@@ -261,6 +266,8 @@ function commentSearch(){
                         showAlert("No Results Found","danger");
                     }
 
+                    else{
+                        comment.style.display="none";
                         let output="<div class='card-columns cardGrid'>";
                         res.data.forEach(item => {
                             output += `
@@ -278,6 +285,7 @@ function commentSearch(){
                         });
                         output+='</div>';
                         result.innerHTML = output;
+                    }
             });
 
     searchButton.disabled=false;
