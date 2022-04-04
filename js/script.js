@@ -75,9 +75,8 @@ function defaultSearch(){
   fetch(`https://api.pushshift.io/reddit/search/submission/?q=${searchKey.value}&over_18=false`)
                 .then(res => res.json())
                     .then(res => {
-                        
+                        document.querySelector('.alert').remove();
                         if(res.data.length == 0){
-                            document.querySelector('.alert').remove();
                             showAlert("No Results Found","danger");
                         }
                         else{
@@ -182,8 +181,9 @@ function submissionSearch(){
         .then(res =>res.json())
             .then(res => {
                 
+                document.querySelector('.alert').remove();
+
                 if(res.data.length == 0){
-                    document.querySelector('.alert').remove();
                     showAlert("No Results Found","danger");
                 }
                 else{
@@ -263,9 +263,9 @@ function commentSearch(){
         .then(res =>res.json())
             .then(res => {
 
+                    document.querySelector('.alert').remove();
 
-                    if(res.data.length == 0){
-                        document.querySelector('.alert').remove();
+                    if(res.data.length == 0){    
                         showAlert("No Results Found","danger");
                     }
 
