@@ -77,6 +77,7 @@ function defaultSearch(){
                     .then(res => {
                         
                         if(res.data.length == 0){
+                            document.querySelector('.alert').remove();
                             showAlert("No Results Found","danger");
                         }
                         else{
@@ -182,6 +183,7 @@ function submissionSearch(){
             .then(res => {
                 
                 if(res.data.length == 0){
+                    document.querySelector('.alert').remove();
                     showAlert("No Results Found","danger");
                 }
                 else{
@@ -263,6 +265,7 @@ function commentSearch(){
 
 
                     if(res.data.length == 0){
+                        document.querySelector('.alert').remove();
                         showAlert("No Results Found","danger");
                     }
 
