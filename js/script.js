@@ -34,9 +34,11 @@ function showAlert(msg,cls){
     const Area = document.querySelector('.searchArea');
     body.insertBefore(tempAlert, Area);
 
+    if(cls === 'danger'){
     setTimeout(()=>{
         document.querySelector('.alert').remove()
     },3000);
+    }
 
 }
 
@@ -75,7 +77,8 @@ function defaultSearch(){
   fetch(`https://api.pushshift.io/reddit/search/submission/?q=${searchKey.value}&over_18=false`)
                 .then(res => res.json())
                     .then(res => {
-                        document.querySelector('.alert').remove();
+
+                            document.querySelector('.alert').remove();
                         if(res.data.length == 0){
                             showAlert("No Results Found","danger");
                         }
