@@ -30,7 +30,7 @@ By default, each request shows 25 posts.
 ### Screenshot
 
 1. Landing Page
-<img src="./screenshots/Homepage.PNG" width="1000" height="2000" alt="homepage">
+<img src="./screenshots/Homepage.PNG" alt="homepage">
 <br>
 2. Default Search Result: 25 result per query
 <img src="./screenshots/default search.png" alt="homepage">
@@ -38,8 +38,8 @@ By default, each request shows 25 posts.
 3. Form for Search only submissions
 <img src="./screenshots/submission search form.png" width="100" height="100" alt="submission search form.png">
 <br>
-1. Landing Page
-<img src="./screenshots/Homepage.PNG" width="100" height="100" alt="homepage">
+4. Landing Page
+<img src="./screenshots/Homepage.PNG" width="500" height="700" alt="homepage">
 <br>
 1. Landing Page
 <img src="./screenshots/Homepage.PNG" width="100" height="100" alt="homepage">
