@@ -52,11 +52,11 @@ By default, each request shows 25 posts.
 
 I would like to explain my process is steps so that you can easily understand it:
 
-  - 1: Read API documentation. So, that you can get how and where to start your project.
-  - 2:Create HTML File
-  - 3: Use Bootstrap and CSS according to your choice
-  - 4: Add basic javascript.
-  - 5: Now again read documentation and complete the project.
+  - ead API documentation. So, that you can get how and where to start your project.
+  - Create HTML File
+  - Use Bootstrap and CSS according to your choice
+  - Add basic javascript.
+  - Now again read documentation and complete the project.
 
 ### Built with
 
