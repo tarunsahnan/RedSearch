@@ -24,33 +24,29 @@ By default, each request shows 25 posts.
 
 ### Screenshot
 
-#### 1. Landing Page
+1. Landing Page
 <img src="./screenshots/Homepage.PNG" alt="homepage">
 <br>
 
-#### 2. Default Search Result: 25 result per query
+2. Default Search Result: 25 result per query
 <img src="./screenshots/default search.png" alt="default search result">
 <br>
  
-#### 3. Form for Search only submissions
+3. Form for Search only submissions
 <img src="./screenshots/submission search form.png" alt="submission search form">
 <br>
 
-#### 4. Submission Search Result
+4. Submission Search Result
 <img src="./screenshots/submission search.png" alt="submission search result">
 <br>
 
-#### 5. Form for Search only comments
+5. Form for Search only comments
 <img src="./screenshots/comment search form.png" alt="comment search form">
 <br>
 
-#### 6. Comment Search Result
+6. Comment Search Result
 <img src="./screenshots/comment search.png" alt="comment search.png">
 
-
-### Links
-
-- Live URL: [https://tarunsahnan.github.io/RedSearch/](https://tarunsahnan.github.io/RedSearch/)
 
 ## My process
 
